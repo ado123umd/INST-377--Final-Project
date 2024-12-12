@@ -1,0 +1,43 @@
+body {
+    background-color: bisque;
+}
+#mainnav {
+    background-color: aqua;
+    align-items: center;
+}
+#mainnav ul li{
+    padding: 10px;
+    list-style-type: none;
+    display: inline-block;
+}
+#mainnav li:hover{
+    background-color: white;
+}
+#missionbox {
+    background-color: white;
+    margin: auto;
+    width: 20%;
+    border: 2px solid black;
+    text-align: center;
+}
+#purposebox {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+    text-align: center;
+}
+#contactbox {
+    background-color: turquoise;
+    width: 20%;
+    border: 2px solid black;
+    text-align: center;
+    float: right;
+}
+#instructbox {
+    background-color: white;
+    width: 40%;
+    text-align: center;
+    border: 2px solid black;
+    margin: auto;
+}
