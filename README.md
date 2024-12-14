@@ -126,12 +126,3 @@ The application has both the frontend and backend in the same directory. runnnin
         }, ``
  
  
- 
- ### Future Development Roadmap
--  User Authentication: Add role-based access for students, faculty, and administrators.
-    
--  Search and Filter Functionality: Enhance course search by department, semester, and credits.
-    
-- Data Export: Allow exporting course data in CSV and PDF formats.
-    
-- Integration with University APIs: Sync real-time data from the university's course catalog.
