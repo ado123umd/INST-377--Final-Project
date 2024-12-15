@@ -17,4 +17,10 @@ router.get('/:id', getCourseDetails);
 // //  sync courses from UMD API to the Supabase database
 // router.post('/sync', syncCourses);
 
+const { getPopularCourses } = require('../controllers/courseController');
+
+// Fetch popular courses
+router.get('/popular', getPopularCourses);
+
+
 module.exports = router;
