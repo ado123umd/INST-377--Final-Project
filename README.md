@@ -125,4 +125,27 @@ The application has both the frontend and backend in the same directory. runnnin
             "semester":"summer 2024"
         }, ``
  
- 
+ Update your documentation to reflect the new endpoint:
+
+Endpoint: GET /api/courses/popular
+Description: Fetches the top 10 most popular courses (based on a popularity field in the database).
+Sample Response:
+json
+
+[
+    {
+        "course_id": "CMSC131",
+        "name": "Object-Oriented Programming I",
+        "description": "Introduction to Java and object-oriented programming.",
+        "credits": 4,
+        "popularity": 95
+    },
+    {
+        "course_id": "MATH140",
+        "name": "Calculus I",
+        "description": "Introduction to differential and integral calculus.",
+        "credits": 4,
+        "popularity": 90
+    }
+]
+
