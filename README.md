@@ -149,5 +149,8 @@ json
     }
 ]
 
-##Known Bugs
+## Known Bugs
 There are some bugs with the code itself stored in the function such as when you select other semesters in function page, it won't show up any results as all the course's semester's are in the Spring of 2025 only. The purpose of the semester form is to allow users to check previous courses in the past semesters for past avaliablity. The start time of the function page is also not sorted from "am" time to "pm" time. The order is unorganized so that can be fix if worked on. The department select form only includes courses that start with the letter "A" due to the limitation of how many courses are in the API "https://beta.umd.io". This bug can be fix if the API includes more courses to use in the function page.
+
+## Roadmap For Future Development
+For future development on this app, there can be adding implementations such as adding more filters for searching for courses to navigate specific courses with specific filters. Another inclusion to the app can be an implementation of a course scheduler on the same page as the function page. As you search for courses, you can also add courses to a schedule so that both can be side by side to view and navigate instead of having to navigate to another page.
