@@ -39,6 +39,28 @@ const getCourseDetails = async (req, res) => {
     }
 };
 
+// Fetch popular courses
+const getPopularCourses = async (req, res) => {
+    try {
+        // Fetch courses with high popularity from Supabase
+        const { data, error } = await supabase
+            .from('courses')
+            .select('*')
+            .gte('popularity', 80) // Example: popularity >= 80
+            .limit(10);
+
+        if (error) throw error;
+
+        res.status(200).json(data);
+    } catch (error) {
+        console.error('Error fetching popular courses:', error);
+        res.status(500).json({ error: 'Failed to fetch popular courses' });
+    }
+};
+
+module.exports = { getPopularCourses };
+
+
 // fetch the course by major
 
 // const getCoursesByMajor = async (req, res) => {
