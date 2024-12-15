@@ -125,4 +125,49 @@ The application has both the frontend and backend in the same directory. runnnin
             "semester":"summer 2024"
         }, ``
  
- 
+- Integration in the Front End
+To display the "Popular Courses" section in your front end, you can use the following sample HTML and JavaScript code:
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Courses</title>
+</head>
+<body>
+    <h1>Popular Courses</h1>
+    <ul id="popular-courses">Loading...</ul>
+
+    <script>
+        // Fetch and display popular courses
+        async function fetchPopularCourses() {
+            try {
+                const response = await fetch('http://localhost:5001/api/courses/popular');
+                const popularCourses = await response.json();
+
+                const list = document.getElementById('popular-courses');
+                list.innerHTML = ''; // Clear existing content
+
+                if (popularCourses.length === 0) {
+                    list.innerHTML = '<li>No popular courses available</li>';
+                } else {
+                    popularCourses.forEach(course => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${course.name} - ${course.credits} Credits`;
+                        list.appendChild(listItem);
+                    });
+                }
+            } catch (error) {
+                console.error('Error fetching popular courses:', error);
+                document.getElementById('popular-courses').innerHTML = '<li>Failed to load courses</li>';
+            }
+        }
+
+        // Call the function on page load
+        fetchPopularCourses();
+    </script>
+</body>
+</html>
+
