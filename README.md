@@ -16,7 +16,7 @@ Our project allows UMD students to easily create a schedule for registering for 
 
   ## Developer Manual
    ### Audience
-   The maual is intended for future developers who will maintain the application. 
+   The manual is intended for future developers who will maintain the application. Below is listed all things a future developer may need to know when trying to imprtrove the site in the future and what may be needed for a developer to install our progrsm.
 
    ### Installation Guide
    #### Prerequisites
