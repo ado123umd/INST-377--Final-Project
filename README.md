@@ -2,6 +2,9 @@
 # Project Title 
 Chelone
 
+## link to developer manual
+https://github.com/ado123umd/INST-377--Final-Project/blob/main/README.md#developer-manual
+
 
 ## Course Scheduler Web App
  The course scheduler is a web-based application to provide users with detailed information about the university courses, prerequisite for the courses and enable students to manage their courses by scheduling their courses.
