@@ -129,7 +129,23 @@ async function LoadSemester() {
 
 })}
 
+async function LoadCourse() {
 
+    const courses = await LoadAPICourses();
+
+
+    
+    const apiCourses = document.getElementById("courses");
+    courses.forEach( (courses) => {
+
+        const option = document.createElement('option')
+        option.value = courses.course_id
+        option.textContent = `${courses.course_id} - ${courses.name}`
+        apiCourses.appendChild(option)
+        
+    })
+
+}
 
 
 
@@ -138,7 +154,8 @@ async function LoadSemester() {
 
 window.onload =  async function () {
     await LoadSemester();
-    await LoadDepartment();
     await LoadStartTime();
+    await LoadCourse();
+    await LoadDepartment();
     
 };
