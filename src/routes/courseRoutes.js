@@ -19,8 +19,4 @@ router.get('/:id', getCourseDetails);
 
 const { getPopularCourses } = require('../controllers/courseController');
 
-// Fetch popular courses
-router.get('/popular', getPopularCourses);
-
-
 module.exports = router;
