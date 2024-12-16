@@ -3,7 +3,7 @@
 Chelone
 
 ## link to developer manual
-https://github.com/ado123umd/INST-377--Final-Project/blob/main/README.md#developer-manual
+https://github.com/ado123umd/INST-377--Final-Project/tree/main/docs#developer-manual
 
 
 ## Course Scheduler Web App
