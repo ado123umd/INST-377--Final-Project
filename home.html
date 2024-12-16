@@ -10,42 +10,14 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-left">
-            <img src="umd-logo.png" alt="UMD Logo" class="logo">
-            <h1>UMD Course Scheduler</h1>
-        </div>
-        
-        <div class="nav-center">
-            <div class="dropdown">
-                <button class="dropbtn">Course Categories</button>
-                <div class="dropdown-content">
-                    <a href="#">Core Requirements</a>
-                    <a href="#">Major Requirements</a>
-                    <a href="#">Prerequisites</a>
-                </div>
-            </div>
-            
-            <a href="scheduler.html">Schedule Builder</a>
-            <a href="about.html">About</a>
-            <a href="courses.html">Courses</a>
-
-
-
-        </div>
-            
-            <div class="search-container">
-                <input type="text" placeholder="Search courses by name, code, or requirement...">
-                <button type="submit">Search</button>
-            </div>
-        </div>
-
-        <div class="nav-right">
-            <button class="btn login">Login</button>
-            <button class="btn signup">Sign Up</button>
-        </div>
+    <nav id="mainnav">
+        <img src="umd-logo.png" alt="UMD Logo" class="logo">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Function_Page.html">Course Scheduler</a></li>
+        </ul>
     </nav>
-
     <section class="welcome-section">
         <div class="banner-section">
             <h1>Plan Your Academic Journey</h1>
@@ -53,50 +25,13 @@
             <button class="btn get-started">Start Planning</button>
         </div>
     </section>
-
-    <section class="features">
-        <h2>Key Features</h2>
-        <div class="feature-grid">
-            <div class="feature">
-                <h3>Course Search</h3>
-                <p>Find specific classes by major, requirements, or prerequisites</p>
-            </div>
-            <div class="feature">
-                <h3>Prerequisite Tracking</h3>
-                <p>Easily view and plan prerequisite courses for your desired classes</p>
-            </div>
-            <div class="feature">
-                <h3>Major Requirements</h3>
-                <p>Track your progress towards completing your major requirements</p>
-            </div>
-            <div class="feature">
-                <h3>Schedule Builder</h3>
-                <p>Create conflict-free class schedules that fit your needs</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="course-categories">
-        <h2>Browse Courses By Category</h2>
-        <div class="category-grid">
-            <div class="category">
-                <h3>Benchmark Courses</h3>
-                <p>Essential courses required for your major</p>
-                <button class="btn view-courses">View Courses</button>
-            </div>
-            <div class="category">
-                <h3>Core Requirements</h3>
-                <p>General education and university requirements</p>
-                <button class="btn view-courses">View Courses</button>
-            </div>
-            <div class="category">
-                <h3>Major-Specific</h3>
-                <p>Courses specific to your chosen major</p>
-                <button class="btn view-courses">View Courses</button>
-            </div>
-        </div>
-    </section>
-
+      <section class="features">
+          <h2>Available Courses</h2>
+          <div class="feature-grid">
+              <div class="feature">
+              </div>
+          </div>
+      </section>
     <script src="home.js"></script>
 </body>
 </html>
