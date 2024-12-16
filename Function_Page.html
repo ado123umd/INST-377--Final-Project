@@ -3,21 +3,57 @@
     <head>
 
         <script src="./Function_Java.js" defer></script>
+        <link rel="stylesheet" href="/Users/princess/Downloads/home.css">
+        <link rel="stylesheet" href="/Users/princess/Downloads/function.css">
 
+        
     </head>
-
-
-
-
-
-
     <body>
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="umd-logo.png" alt="UMD Logo" class="logo">
+                <h1>UMD Course Scheduler</h1>
+            </div>
+            <div class="nav-center">
+                <div class="dropdown">
+                    <button class="dropbtn">Course Categories</button>
+                    <div class="dropdown-content">
+                        <a href="#">Core Requirements</a>
+                        <a href="#">Major Requirements</a>
+                        <a href="#">Prerequisites</a>
+                    </div>
+                </div>
+                
+                <a href="scheduler.html">Schedule Builder</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+    
+    
+    
+            </div>
+                
+                <div class="search-container">
+                    <input type="text" placeholder="Search courses by name, code, or requirement...">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+    
+            <div class="nav-right">
+                <button class="btn login">Login</button>
+                <button class="btn signup">Sign Up</button>
+            </div>
+        </nav>
 
 
         <h1>Find your Course!</h1>
-        <form>
+        <form class="formnav">
             <select id="departments" name="departments">
                 <option value="">Select Department</option>
+
+            </select>
+            <br>
+            <select id="courses" name="courses">
+                <option value="">Select Course</option>
 
             </select>
             <br>
@@ -30,12 +66,11 @@
                 <option value="">Select Start Time</option>
 
             </select>
-            <br>
-            <button type="button" id="searchCourse">Search Course</button>
+            
         </form>
 
-       <h2>Result Table:</h2>
-       <div id="CourseResults"></div>
+   
+       
 
         
 
@@ -43,6 +78,18 @@
 
 
     </body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
 
 
 
