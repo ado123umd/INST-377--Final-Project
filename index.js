@@ -9,6 +9,9 @@ const scheduleRoutes = require('./src/routes/scheduleRoutes');
 // Middleware
 app.use(cors());
 app.use(express.json()); 
+app.get('/', (req, res) => {
+    res.sendFile('public/home.html', { root: 'public' });
+});
 
 //register cours routes
 app.use('/api/courses', courseRoutes);
