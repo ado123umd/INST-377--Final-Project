@@ -2,6 +2,9 @@
 # Project Title 
 Chelone
 
+## link to developer manual
+https://github.com/ado123umd/INST-377--Final-Project/tree/main/docs#developer-manual
+
 
 ## Course Scheduler Web App
  The course scheduler is a web-based application to provide users with detailed information about the university courses, prerequisite for the courses and enable students to manage their courses by scheduling their courses.
@@ -125,49 +128,32 @@ The application has both the frontend and backend in the same directory. runnnin
             "semester":"summer 2024"
         }, ``
  
-- Integration in the Front End
-To display the "Popular Courses" section in your front end, you can use the following sample HTML and JavaScript code:
+ Update your documentation to reflect the new endpoint:
 
-html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popular Courses</title>
-</head>
-<body>
-    <h1>Popular Courses</h1>
-    <ul id="popular-courses">Loading...</ul>
+Endpoint: GET /api/courses/popular
+Description: Fetches the top 10 most popular courses (based on a popularity field in the database).
+Sample Response:
+json
 
-    <script>
-        // Fetch and display popular courses
-        async function fetchPopularCourses() {
-            try {
-                const response = await fetch('http://localhost:5001/api/courses/popular');
-                const popularCourses = await response.json();
+[
+    {
+        "course_id": "CMSC131",
+        "name": "Object-Oriented Programming I",
+        "description": "Introduction to Java and object-oriented programming.",
+        "credits": 4,
+        "popularity": 95
+    },
+    {
+        "course_id": "MATH140",
+        "name": "Calculus I",
+        "description": "Introduction to differential and integral calculus.",
+        "credits": 4,
+        "popularity": 90
+    }
+]
 
-                const list = document.getElementById('popular-courses');
-                list.innerHTML = ''; // Clear existing content
+## Known Bugs
+There are some bugs with the code itself stored in the function such as when you select other semesters in function page, it won't show up any results as all the course's semester's are in the Spring of 2025 only. The purpose of the semester form is to allow users to check previous courses in the past semesters for past avaliablity. The start time of the function page is also not sorted from "am" time to "pm" time. The order is unorganized so that can be fix if worked on. The department select form only includes courses that start with the letter "A" due to the limitation of how many courses are in the API "https://beta.umd.io". This bug can be fix if the API includes more courses to use in the function page.
 
-                if (popularCourses.length === 0) {
-                    list.innerHTML = '<li>No popular courses available</li>';
-                } else {
-                    popularCourses.forEach(course => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = `${course.name} - ${course.credits} Credits`;
-                        list.appendChild(listItem);
-                    });
-                }
-            } catch (error) {
-                console.error('Error fetching popular courses:', error);
-                document.getElementById('popular-courses').innerHTML = '<li>Failed to load courses</li>';
-            }
-        }
-
-        // Call the function on page load
-        fetchPopularCourses();
-    </script>
-</body>
-</html>
-
+## Roadmap For Future Development
+For future development on this app, there can be adding implementations such as adding more filters for searching for courses to navigate specific courses with specific filters. Another inclusion to the app can be an implementation of a course scheduler on the same page as the function page. As you search for courses, you can also add courses to a schedule so that both can be side by side to view and navigate instead of having to navigate to another page. We may also want to introduce role based access for studebnts, faculty, and admintration. Another feature that might be good to add is being able to export course data using CSV and PDF formats. Lastly, we would want to sync the real time UMD course catalog to have more updated course information instead of external data we are currently using.
