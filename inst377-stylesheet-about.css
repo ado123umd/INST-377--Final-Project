@@ -2,17 +2,37 @@ body {
     background-color: bisque;
 }
 #mainnav {
-    background-color: aqua;
+    padding: 20px;
     align-items: center;
 }
-#mainnav ul li{
-    padding: 10px;
-    list-style-type: none;
-    display: inline-block;
+
+#mainnav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
-#mainnav li:hover{
+  #mainnav li a {
     background-color: white;
-}
+      text-decoration: none;
+      color: teal;
+      font-weight: bold;
+      padding: 8px 16px;
+      border: 2px solid teal;
+      border-radius: 6px;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+
+  #mainnav li a:hover {
+      background-color: teal;
+      color: white;
+      transform: translateY(-2px);
+  }
+
+  #mainnav li a:active {
+      transform: translateY(1px);
+  }
+
 #missionbox {
     background-color: white;
     margin: auto;
