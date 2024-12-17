@@ -7,17 +7,187 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Navbar and Dropdown Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-center a, .dropbtn {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        /* Other Layout Styles */
+        .search-container input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .welcome-section {
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .features {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .category-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .feature h3, .category h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .nav-center {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-grid, .category-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav id="mainnav">
-        <img src="umd-logo.png" alt="UMD Logo" class="logo">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="inst377-finalproject-about.html">About</a></li>
-            <li><a href="Function_Page.html">Course Scheduler</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="umd-logo.png" alt="UMD Logo" class="logo">
+            <h1>UMD Course Scheduler</h1>
+        </div>
+        
+        <div class="nav-center">
+            <div class="dropdown">
+                <button class="dropbtn">Course Categories</button>
+                <div class="dropdown-content">
+                    <a href="#">Core Requirements</a>
+                    <a href="#">Major Requirements</a>
+                    <a href="#">Prerequisites</a>
+                </div>
+            </div>
+            <a href="scheduler.html">Schedule Builder</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+        </div>
+            
+        <div class="search-container">
+            <input type="text" placeholder="Search courses by name, code, or requirement...">
+            <button type="submit">Search</button>
+        </div>
+
+        <div class="nav-right">
+            <button class="btn login">Login</button>
+            <button class="btn signup">Sign Up</button>
+        </div>
     </nav>
+
     <section class="welcome-section">
         <div class="banner-section">
             <h1>Plan Your Academic Journey</h1>
@@ -25,13 +195,50 @@
             <button class="btn get-started">Start Planning</button>
         </div>
     </section>
-      <section class="features">
-          <h2>Choose your Courses</h2>
-          <div class="feature-grid">
-              <div class="feature">
-              </div>
-          </div>
-      </section>
+
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Course Search</h3>
+                <p>Find specific classes by major, requirements, or prerequisites</p>
+            </div>
+            <div class="feature">
+                <h3>Prerequisite Tracking</h3>
+                <p>Easily view and plan prerequisite courses for your desired classes</p>
+            </div>
+            <div class="feature">
+                <h3>Major Requirements</h3>
+                <p>Track your progress towards completing your major requirements</p>
+            </div>
+            <div class="feature">
+                <h3>Schedule Builder</h3>
+                <p>Create conflict-free class schedules that fit your needs</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-categories">
+        <h2>Browse Courses By Category</h2>
+        <div class="category-grid">
+            <div class="category">
+                <h3>Benchmark Courses</h3>
+                <p>Essential courses required for your major</p>
+                <button class="btn view-courses">View Courses</button>
+            </div>
+            <div class="category">
+                <h3>Core Requirements</h3>
+                <p>General education and university requirements</p>
+                <button class="btn view-courses">View Courses</button>
+            </div>
+            <div class="category">
+                <h3>Major-Specific</h3>
+                <p>Courses specific to your chosen major</p>
+                <button class="btn view-courses">View Courses</button>
+            </div>
+        </div>
+    </section>
+
     <script src="home.js"></script>
 </body>
 </html>
