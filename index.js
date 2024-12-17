@@ -7,6 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(__dirname + '/public'));
+
 // Serve the home page
 app.get('/', (req, res) => {
     res.sendFile('home.html', { root: path.join(__dirname, 'public') });
