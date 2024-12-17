@@ -1,29 +1,25 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path'); // Missing 'path' import
 const app = express();
-const port = 5001;
-const path = require('path');// Missing 'path' import
-const courseRoutes = require('./src/routes/courseRoutes');
-const majorsRoutes = require('./src/routes/majorRoutes');
-const scheduleRoutes = require('./src/routes/scheduleRoutes');
 
 // Middleware
 app.use(cors());
-
 app.use(express.json());
 
-
+// Serve the home page
 app.get('/', (req, res) => {
     res.sendFile('home.html', { root: path.join(__dirname, 'public') });
 });
 
+// Routes
+const courseRoutes = require('./src/routes/courseRoutes');
+const majorsRoutes = require('./src/routes/majorRoutes');
+const scheduleRoutes = require('./src/routes/scheduleRoutes');
 
-
-//register cours routes
 app.use('/api/courses', courseRoutes);
 app.use('/api/schedules', scheduleRoutes);
-app.use('/api/majors', majorsRoutes);	
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
-module.exports =app;
+app.use('/api/majors', majorsRoutes);
+
+// Export the app for Vercel
+module.exports = app;
