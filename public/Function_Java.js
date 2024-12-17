@@ -1,6 +1,6 @@
 async function LoadAPICourses() {
 
-    return fetch(`https://api.umd.io/v1/courses?per_page=200`)
+    return fetch(`GET/courses`)
         .then ((res) => res.json());
 }
 
