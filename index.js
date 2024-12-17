@@ -15,7 +15,7 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.sendFile('public/home.html', { root: 'public' });
+    res.sendFile('home.html', { root: path.join(__dirname, 'public') });
 });
 
 
