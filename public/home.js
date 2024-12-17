@@ -247,3 +247,4 @@ function loadMajors() {
         })
         .catch(error => console.error('Error loading majors:', error));
 }
+  
