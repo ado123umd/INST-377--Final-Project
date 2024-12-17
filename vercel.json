@@ -10,9 +10,6 @@
     {
       "src": "/(.*)",
       "dest": "/index.js"
-    }, {
-      "src": "/(.*\\.(css|js|png|html))",
-      "dest": "/public/$1"
     }
   ]
 }
