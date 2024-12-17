@@ -128,29 +128,7 @@ The application has both the frontend and backend in the same directory. runnnin
             "semester":"summer 2024"
         }, ``
  
- Update your documentation to reflect the new endpoint:
 
-Endpoint: GET /api/courses/popular
-Description: Fetches the top 10 most popular courses (based on a popularity field in the database).
-Sample Response:
-json
-
-[
-    {
-        "course_id": "CMSC131",
-        "name": "Object-Oriented Programming I",
-        "description": "Introduction to Java and object-oriented programming.",
-        "credits": 4,
-        "popularity": 95
-    },
-    {
-        "course_id": "MATH140",
-        "name": "Calculus I",
-        "description": "Introduction to differential and integral calculus.",
-        "credits": 4,
-        "popularity": 90
-    }
-]
 
 ## Known Bugs
 There are some bugs with the code itself stored in the function such as when you select other semesters in function page, it won't show up any results as all the course's semester's are in the Spring of 2025 only. The purpose of the semester form is to allow users to check previous courses in the past semesters for past avaliablity. The start time of the function page is also not sorted from "am" time to "pm" time. The order is unorganized so that can be fix if worked on. The department select form only includes courses that start with the letter "A" due to the limitation of how many courses are in the API "https://beta.umd.io". This bug can be fix if the API includes more courses to use in the function page.
