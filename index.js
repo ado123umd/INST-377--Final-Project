@@ -12,9 +12,7 @@ app.get('/', (req, res) => {
     res.sendFile('home.html', { root: path.join(__dirname, 'public') });
 });
 
-app.get('/', (req, res) => {
-    res.sendFile('Function_Page.html', { root: path.join(__dirname, 'public') });
-});
+
 
 // Routes
 const courseRoutes = require('./src/routes/courseRoutes');
