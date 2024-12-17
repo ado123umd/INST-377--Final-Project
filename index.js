@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = 5001;
+const path = require('path');// Missing 'path' import
 const courseRoutes = require('./src/routes/courseRoutes');
 const majorsRoutes = require('./src/routes/majorRoutes');
 const scheduleRoutes = require('./src/routes/scheduleRoutes');
@@ -10,8 +11,6 @@ const scheduleRoutes = require('./src/routes/scheduleRoutes');
 app.use(cors());
 
 app.use(express.json());
-
-
 
 
 app.get('/', (req, res) => {
@@ -27,3 +26,4 @@ app.use('/api/majors', majorsRoutes);
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+module.exports =app;
