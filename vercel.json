@@ -10,6 +10,10 @@
     {
       "src": "/(.*)",
       "dest": "/index.js"
+    },
+    {
+      "src": "/home.css",
+      "dest": "/public/home.css"
     }
   ]
 }
